@@ -44,7 +44,9 @@ def client():
 
 
 def zalit(cl, telo):
-    cl.put_object(Bucket=BUCKET, Key=KLYUCH, Body=telo,
+    # ACL обязателен: у бакета нет публичной политики, объект без public-read отдаёт 403.
+    # 05.10.2026 первая заливка ушла без него, и лендинг две минуты был недоступен.
+    cl.put_object(Bucket=BUCKET, Key=KLYUCH, Body=telo, ACL="public-read",
                   ContentType="text/html; charset=utf-8", CacheControl="max-age=300")
 
 
@@ -68,7 +70,11 @@ def main():
     (PAPKA / ".rollback").mkdir(exist_ok=True)
     (PAPKA / ".rollback" / "index.html").write_bytes(boy)
     zalit(client(), novoe)
-    proverka = urllib.request.urlopen(BOY + "?v=check", timeout=30).read()
+    # Проверка без параметров в адресе: на любой query-параметр бакет отвечает 403.
+    try:
+        proverka = urllib.request.urlopen(BOY, timeout=30).read()
+    except Exception as e:
+        sys.exit(f"⛔ Бой не отдаёт лендинг ({e}). Откат: python3 deploy.py --rollback")
     print("✓ Залито, бой отдаёт новую версию" if proverka == novoe else "⚠ Бой отдаёт не то, что залили — проверь")
     print("   откат, если что: python3 deploy.py --rollback")
 
