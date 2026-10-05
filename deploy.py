@@ -70,7 +70,7 @@ def main():
     (PAPKA / ".rollback").mkdir(exist_ok=True)
     (PAPKA / ".rollback" / "index.html").write_bytes(boy)
     zalit(client(), novoe)
-    # Проверка без параметров в адресе: на любой query-параметр бакет отвечает 403.
+    # Проверка: бой отдаёт ровно залитое. Если ACL не встал, здесь будет 403.
     try:
         proverka = urllib.request.urlopen(BOY, timeout=30).read()
     except Exception as e:
