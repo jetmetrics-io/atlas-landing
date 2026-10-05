@@ -819,7 +819,7 @@ img{max-width:100%; display:block}
 <div class="wrap">
   <div class="eyebrow"><span class="d"></span>история обновлений</div>
   <h2 class="btitle">Атлас растёт. <span class="g">Все обновления входят в покупку</span></h2>
-  <ol class="tl"><li class="ti"><span class="td">24.07</span><span class="tt">Атлас переехал на сайт</span><span class="tx">Интерактивное приложение вместо доски в Miro. Три карты открыты бесплатно.</span></li><li class="ti"><span class="td">21.08</span><span class="tt">Полные карточки метрик</span><span class="tx">Нюансы расчёта, пример с цифрами, зачем нужна метрика и когда она не нужна.</span></li><li class="ti"><span class="td">28.08</span><span class="tt">Дерево чистой прибыли</span><span class="tx">Прибыль, разложенная до драйверов: 170 метрик, бесплатно.</span></li><li class="ti"><span class="td">04.09</span><span class="tt">Суть и разрезы</span><span class="tx">В какую сторону метрике хорошо расти и в каких разрезах искать причину.</span></li><li class="ti"><span class="td">26.09</span><span class="tt">Деревья LTV и повторных продаж</span><span class="tx">Из чего складывается ценность клиента и выручка от тех, кто возвращается.</span></li><li class="ti"><span class="td">30.09</span><span class="tt">Справочник метрик</span><span class="tx">Все метрики Атласа в одной таблице с поиском.</span></li><li class="ti is-new"><span class="td">05.10</span><span class="tt">Вопросы к метрикам</span><span class="tx">С чего начать разбор каждой метрики и что проверить в данных.</span><span class="tnew">новое</span></li></ol>
+  <div class="mon" id="upd-mon"><div class="mon__g is-open"><button type="button" class="mon__h" aria-expanded="true"><span class="mon__name">Октябрь 2026</span><span class="mon__cnt">1 обновление</span><span class="mon__dots"><i></i></span><span class="mon__chev">›</span></button><div class="mon__body"><div class="mon__it"><span class="mon__d">05.10</span><div><div class="mon__t">Вопросы к метрикам <span class="mon__new">новое</span></div><div class="mon__x">С чего начать разбор каждой метрики и что проверить в данных.</div></div></div></div></div><div class="mon__g"><button type="button" class="mon__h" aria-expanded="false"><span class="mon__name">Сентябрь 2026</span><span class="mon__cnt">3 обновления</span><span class="mon__dots"><i></i><i></i><i></i></span><span class="mon__chev">›</span></button><div class="mon__body"><div class="mon__it"><span class="mon__d">30.09</span><div><div class="mon__t">Справочник метрик</div><div class="mon__x">Все метрики Атласа в одной таблице с поиском.</div></div></div><div class="mon__it"><span class="mon__d">26.09</span><div><div class="mon__t">Деревья LTV и повторных продаж</div><div class="mon__x">Из чего складывается ценность клиента и выручка от тех, кто возвращается.</div></div></div><div class="mon__it"><span class="mon__d">04.09</span><div><div class="mon__t">Суть и разрезы</div><div class="mon__x">В какую сторону метрике хорошо расти и в каких разрезах искать причину.</div></div></div></div></div><div class="mon__g"><button type="button" class="mon__h" aria-expanded="false"><span class="mon__name">Август 2026</span><span class="mon__cnt">2 обновления</span><span class="mon__dots"><i></i><i></i></span><span class="mon__chev">›</span></button><div class="mon__body"><div class="mon__it"><span class="mon__d">28.08</span><div><div class="mon__t">Дерево чистой прибыли</div><div class="mon__x">Прибыль, разложенная до драйверов: 170 метрик, бесплатно.</div></div></div><div class="mon__it"><span class="mon__d">21.08</span><div><div class="mon__t">Полные карточки метрик</div><div class="mon__x">Нюансы расчёта, пример с цифрами, зачем нужна метрика и когда она не нужна.</div></div></div></div></div><div class="mon__g"><button type="button" class="mon__h" aria-expanded="false"><span class="mon__name">Июль 2026</span><span class="mon__cnt">1 обновление</span><span class="mon__dots"><i></i></span><span class="mon__chev">›</span></button><div class="mon__body"><div class="mon__it"><span class="mon__d">24.07</span><div><div class="mon__t">Атлас переехал на сайт</div><div class="mon__x">Интерактивное приложение вместо доски в Miro. Три карты открыты бесплатно.</div></div></div></div></div></div>
 </div>
 </section>
 <section class="blk cta1" id="sec-cta1" data-num="CTA" data-name="Сначала посмотрите">
@@ -1317,22 +1317,27 @@ document.createElement('button').addEventListener('click',function(){
 .upd .eyebrow .d{width:8px;height:8px;border-radius:50%;background:var(--jm-green)}
 .upd .btitle{font-family:var(--sans);font-weight:800;color:var(--jm-ink);letter-spacing:-.02em;line-height:1.16;font-size:1.7rem;margin:0 0 40px;max-width:820px;text-wrap:balance}
 .upd .btitle .g{color:var(--jm-green-press)}
-.upd .tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px;position:relative}
-.upd .tl::before{content:"";position:absolute;left:8px;right:8px;top:7px;height:2px;background:linear-gradient(90deg,var(--jm-line) 0%,var(--jm-green) 100%);border-radius:2px}
-.upd .ti{position:relative;padding-top:30px;display:flex;flex-direction:column;gap:6px;min-width:0}
-.upd .ti::before{content:"";position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;background:var(--jm-surface);border:2px solid var(--jm-green);box-sizing:border-box}
-.upd .ti.is-new::before{background:var(--jm-green);box-shadow:0 0 0 5px var(--jm-green-tint)}
-.upd .td{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--jm-green-press);font-variant-numeric:tabular-nums}
-.upd .tt{font-weight:700;color:var(--jm-ink);font-size:.98rem;line-height:1.25}
-.upd .tx{color:var(--jm-muted);font-size:.86rem;line-height:1.45}
-.upd .tnew{align-self:flex-start;font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--jm-green-press);background:var(--jm-green-tint);border-radius:var(--r-pill);padding:3px 9px;margin-top:2px}
+.upd .mon{display:flex;flex-direction:column;gap:10px;max-width:760px}
+.upd .mon__g{background:var(--jm-surface);border:1px solid var(--jm-line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e1)}
+.upd .mon__h{width:100%;display:flex;align-items:center;gap:12px;padding:15px 18px;border:0;background:none;text-align:left;cursor:pointer;font-family:var(--sans)}
+.upd .mon__h:focus-visible{outline:2px solid var(--jm-green);outline-offset:-2px;border-radius:var(--r-lg)}
+.upd .mon__name{font-weight:700;color:var(--jm-ink);font-size:1.02rem}
+.upd .mon__cnt{font-family:var(--mono);font-size:12px;color:var(--jm-faint)}
+.upd .mon__dots{display:flex;gap:4px;margin-left:auto}
+.upd .mon__dots i{width:8px;height:8px;border-radius:50%;background:var(--jm-green)}
+.upd .mon__chev{color:var(--jm-faint);font-size:1.1rem;transition:transform .15s}
+.upd .mon__g.is-open .mon__chev{transform:rotate(90deg)}
+.upd .mon__body{display:none;padding:0 18px 14px}
+.upd .mon__g.is-open .mon__body{display:block}
+.upd .mon__it{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--jm-line-soft)}
+.upd .mon__d{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--jm-green-press);font-variant-numeric:tabular-nums;padding-top:2px}
+.upd .mon__t{font-weight:700;color:var(--jm-ink);font-size:.98rem;line-height:1.3;margin-bottom:2px}
+.upd .mon__x{color:var(--jm-muted);font-size:.9rem;line-height:1.45}
+.upd .mon__new{display:inline-block;vertical-align:2px;font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--jm-green-press);background:var(--jm-green-tint);border-radius:var(--r-pill);padding:3px 9px;margin-left:4px}
+@media (prefers-reduced-motion:reduce){.upd .mon__chev{transition:none}}
 @media (max-width:900px){
   .upd .wrap{padding:60px 20px}
   .upd .btitle{font-size:1.4rem}
-  .upd .tl{grid-template-columns:1fr;gap:22px;padding-left:28px}
-  .upd .tl::before{left:7px;right:auto;top:8px;bottom:8px;width:2px;height:auto;background:linear-gradient(180deg,var(--jm-line) 0%,var(--jm-green) 100%)}
-  .upd .ti{padding-top:0}
-  .upd .ti::before{left:-28px;top:2px}
 }
 </style>
 <script>
@@ -1416,4 +1421,12 @@ document.createElement('button').addEventListener('click',function(){
     })
     .catch(function(){});
 })();
+</script>
+
+<script>
+document.getElementById('upd-mon').addEventListener('click',function(e){
+  var b=e.target.closest('.mon__h'); if(!b) return;
+  var g=b.parentNode; g.classList.toggle('is-open');
+  b.setAttribute('aria-expanded', g.classList.contains('is-open'));
+});
 </script>
