@@ -1300,7 +1300,9 @@ document.createElement('button').addEventListener('click',function(){
 
 <style>html.embed .pnav, html.embed .ptoggle{display:none !important}
 /* ═══════ b3 · карточка метрики с вкладками (05.10.2026) ═══════ */
-.b3 .rtabs{display:flex;gap:2px;padding:0 22px;border-bottom:1px solid var(--jm-line);overflow-x:auto}
+.b3 .rtabs{display:flex;gap:2px;padding:0 22px;border-bottom:1px solid var(--jm-line);overflow-x:auto;scrollbar-width:none}
+.b3 .rtabs::-webkit-scrollbar{display:none}
+@media (max-width:520px){.b3 .rtabs{padding:0 12px;gap:0}.b3 .rtab{padding:10px 7px 8px;font-size:.84rem}}
 .b3 .rtab{border:0;background:none;cursor:pointer;padding:11px 9px 9px;font-family:var(--sans);font-size:.88rem;font-weight:500;color:var(--jm-muted);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .b3 .rtab:hover{color:var(--jm-ink)}
 .b3 .rtab[aria-selected="true"]{color:var(--jm-green-press);border-bottom-color:var(--jm-green);font-weight:600}
